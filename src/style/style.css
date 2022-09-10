@@ -59,10 +59,51 @@ body {
 
 .foot {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .greeting {
     text-align: center;
     font-size: 3em;
     margin-top: 2.65em;
+}
+
+.liamimg {
+    border-radius: 50%;
+    flex: 1;
+    width: 60%;
+    height: auto;
+}
+
+.grid-container {
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.grid-container p {
+    margin-top: 0.9em;
+}
+
+.grid-container a {
+    color: #5994ee;
+}
+
+.grid-container a:visited {
+    color: #5994ee;
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+    background: transparent;
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+}
+
+.page-title {
+    margin-left: 10%;
 }
