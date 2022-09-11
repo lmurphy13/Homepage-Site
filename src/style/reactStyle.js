@@ -22,6 +22,8 @@ const style = {
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "30vh",
+        minHeight: "30vh",
+        width: "100%",
         position: "relative"
     },
     paperCard: {

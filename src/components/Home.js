@@ -12,7 +12,7 @@ class Home extends React.Component {
     displayIntro() {
         if (this.props.winWidth > constants.BREAK_WIDTH) {
             return (
-                <Grid className="grid-container" container>
+                <Grid className="grid-container" style={{marginTop: "2em"}} container>
                     <Grid item xs={4}>
                         <img className="liamimg" src={liam} alt="liam"></img>
                     </Grid>
@@ -46,13 +46,12 @@ class Home extends React.Component {
         } else {
             return (
                 <div>
-                    <Grid className="grid-container" container>
-                        <Grid item xs={8}>
-                            <img className="liamimg" src={liam} alt="liam"
-                                style={{marginLeft: "2.1rem"}}></img>
+                    <Grid className="grid-container" style={{marginTop: "1em"}} container>
+                        <Grid item xs={8} style={{display: "flex", justifyContnet: "center", alignItems: "center"}}>
+                            <img className="liamimg" src={liam} alt="liam"></img>
                         </Grid>
                     </Grid>
-                    <Grid className="grid-container" style={{marginLeft: "-1rem"}} container>
+                    <Grid className="grid-container" container>
                         <Grid item xs={11}>
                             <p>
                                 I am a graduate of {" "}
@@ -92,19 +91,17 @@ class Home extends React.Component {
     }
 
     render() {
-        let greetingClass = (this.props.winWidth <= constants.BREAK_WIDTH) ? "greeting-mobile" : "greeting";
-        const extraStyle = (this.props.winHeight <= constants.BREAK_HEIGHT) ? {} : {marginTop: "0"};
         return (
-            <div>
+            <>
                 <div style={reactStyle.bgImg}>
                     <TitleBar style={reactStyle.titleBar} />
-                    <div className={greetingClass} style={extraStyle}>Hi! I'm Liam.</div>
+                    <div className={"greeting"}>Hi! I'm Liam.</div>
                 </div>
                 <div className="page-content-container">
                     {this.displayIntro()}
                 </div>
                 {this.displayFooter()}
-            </div>
+            </>
         );
     }
 }
