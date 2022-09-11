@@ -22,6 +22,7 @@ const style = {
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "30vh",
+        position: "relative"
     },
     paperCard: {
         background: "#383838",

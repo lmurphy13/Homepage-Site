@@ -1,4 +1,3 @@
-import { width } from "@mui/system"
 import * as actions from "./actionTypes"
 
 export function setWinHeight(height) {
@@ -9,7 +8,6 @@ export function setWinHeight(height) {
 }
 
 export function setWinWidth(width) {
-    console.log("setting width: " + width)
     return {
         type: actions.SET_WIN_WIDTH,
         payload: width

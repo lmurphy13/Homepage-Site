@@ -77,6 +77,7 @@ class Home extends React.Component {
                                     target="_blank"
                                     rel="noreferrer"> Astronautics</a>.
                             </p>
+                            <br/>
                         </Grid>
                     </Grid>
                 </div>
@@ -92,12 +93,12 @@ class Home extends React.Component {
 
     render() {
         let greetingClass = (this.props.winWidth <= constants.BREAK_WIDTH) ? "greeting-mobile" : "greeting";
-
+        const extraStyle = (this.props.winHeight <= constants.BREAK_HEIGHT) ? {} : {marginTop: "0"};
         return (
             <div>
                 <div style={reactStyle.bgImg}>
                     <TitleBar style={reactStyle.titleBar} />
-                    <p className={greetingClass}>Hi! I'm Liam.</p>
+                    <div className={greetingClass} style={extraStyle}>Hi! I'm Liam.</div>
                 </div>
                 <div className="page-content-container">
                     {this.displayIntro()}

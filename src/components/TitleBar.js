@@ -6,6 +6,7 @@ import lava from "../images/lava.jpg";
 import { bindActionCreators } from "redux";
 import * as appActions from "../actions/appActions";
 import { connect } from "react-redux";
+import * as constants from "../constants";
 
 class TitleBar extends React.Component {
     constructor(props) {
@@ -43,11 +44,12 @@ class TitleBar extends React.Component {
         this.handleResize();
 
         window.addEventListener("resize", this.handleResize);
+        window.addEventListener("orientationchange", this.handleResize);
     }
 
     componentWillUnmount() {
         window.removeEventListener("resize", this.handleResize);
-    }
+        window.removeEventListener("orientationchange", this.handleResize);    }
     
     pickStyle() {
         if (this.props.style === undefined) {
@@ -67,7 +69,7 @@ class TitleBar extends React.Component {
     }
 
     renderHamburger() {
-        if (this.props.winWidth <= 800) {
+        if (this.props.winWidth <= constants.BREAK_WIDTH) {
             return (
             <IconButton
                 color="inherit"
@@ -83,25 +85,25 @@ class TitleBar extends React.Component {
     }
 
     renderNav() {
-        if (this.props.winWidth > 800) {
+        if (this.props.winWidth > constants.BREAK_WIDTH) {
             return (
                 <div className="nav-bar">
-                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/">
+                    <NavLink className={({isActive}) => (isActive ? 'nav-link-active' : 'nav-link')}  to="/">
                         Home
                     </NavLink>
-                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/about">
+                    <NavLink className={({isActive}) => (isActive ? 'nav-link-active' : 'nav-link')} to="/about">
                         About
                     </NavLink>
-                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/research">
+                    <NavLink className={({isActive}) => (isActive ? 'nav-link-active' : 'nav-link')} to="/research">
                         Research
                     </NavLink>
-                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/projects">
+                    <NavLink className={({isActive}) => (isActive ? 'nav-link-active' : 'nav-link')} to="/projects">
                         Projects
                     </NavLink>
-                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/resume">
+                    <NavLink className={({isActive}) => (isActive ? 'nav-link-active' : 'nav-link')} to="/resume">
                         Resume
                     </NavLink>
-                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/contact">
+                    <NavLink className={({isActive}) => (isActive ? 'nav-link-active' : 'nav-link')} to="/contact">
                         Contact
                     </NavLink>
                 </div>
@@ -141,22 +143,22 @@ class TitleBar extends React.Component {
                             </IconButton>
                             </div>
                             <div className="drawer-nav">
-                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/">
+                                <NavLink className={({isActive}) => (isActive ? 'nav-link-mobile-active' : 'nav-link-mobile')} to="/">
                                     Home
                                 </NavLink>
-                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/about">
+                                <NavLink className={({isActive}) => (isActive ? 'nav-link-mobile-active' : 'nav-link-mobile')} to="/about">
                                     About
                                 </NavLink>
-                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/research">
+                                <NavLink className={({isActive}) => (isActive ? 'nav-link-mobile-active' : 'nav-link-mobile')} to="/research">
                                     Research
                                 </NavLink>
-                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/projects">
+                                <NavLink className={({isActive}) => (isActive ? 'nav-link-mobile-active' : 'nav-link-mobile')} to="/projects">
                                     Projects
                                 </NavLink>
-                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/resume">
+                                <NavLink className={({isActive}) => (isActive ? 'nav-link-mobile-active' : 'nav-link-mobile')} to="/resume">
                                     Resume
                                 </NavLink>
-                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/contact">
+                                <NavLink className={({isActive}) => (isActive ? 'nav-link-mobile-active' : 'nav-link-mobile')} to="/contact">
                                     Contact
                                 </NavLink>
                             </div>
@@ -164,7 +166,6 @@ class TitleBar extends React.Component {
                                 &copy; 2019-2022 Liam M. Murphy
                             </Typography>
                         </div>
-
                     </Box>
                 </Drawer>
             </div>

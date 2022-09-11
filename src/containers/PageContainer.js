@@ -32,7 +32,6 @@ class PageContainer extends React.Component {
 
     render() {
         if (this.props.page === "home") {
-            console.log("hello");
             return (
                 <div className="root">
                     <Home/>
