@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { AppBar, Drawer, IconButton, Typography } from "@mui/material";
+import React from "react";
+import { AppBar, Box, Drawer, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
 import lava from "../images/lava.jpg";
-import * as utils from "../utilities";
+import { bindActionCreators } from "redux";
+import * as appActions from "../actions/appActions";
+import { connect } from "react-redux";
 
 class TitleBar extends React.Component {
     constructor(props) {
@@ -23,28 +25,28 @@ class TitleBar extends React.Component {
             maxHeight: "60px"
         }
 
-        this.width = undefined;
-        this.height = undefined;
+    }
+
+    handleResize = () => {
+        let w, h = 0;
+        if (document.body.clientWidth || document.body.clientHeight) {
+            w = document.body.clientWidth;
+            h = document.body.clientHeight;
+
+            this.props.actions.setWinWidth(w);
+            this.props.actions.setWinHeight(h);
+        }
     }
 
     componentDidMount() {
-        function handleResize() {
-            let { height, width } = utils.getWindowDimensions();
-            this.height = height;
-            this.width = width;
-        }
+        // Set initial dimensions when component loads
+        this.handleResize();
 
-
-        window.addEventListener("resize", handleResize);
-
-        //console.log("winHeight: " + this.state.winHeight);
+        window.addEventListener("resize", this.handleResize);
     }
 
-    componentDidUpdate() {
-        let { height, width } = utils.getWindowDimensions();
-        this.height = height;
-        this.width = width;
-        console.log("here");
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.handleResize);
     }
     
     pickStyle() {
@@ -55,64 +57,133 @@ class TitleBar extends React.Component {
         }
     }
 
-    renderHamburger(width) {
-        if (width <= 800) {
+    handleDrawerOpen() {
+        if (this.props.menuOpen === true) {
+            this.props.actions.setMenuClosed();
+        } else {
+            this.props.actions.setMenuOpen();
+        }
+        console.log("Drawer is " + this.props.menuOpen)
+    }
 
+    renderHamburger() {
+        if (this.props.winWidth <= 800) {
             return (
             <IconButton
                 color="inherit"
                 aria-label="open drawer"
-                onClick={this.handleDrawerOpen}
+                onClick={this.handleDrawerOpen.bind(this)}
                 edge="start"
                 style={{margin: 2}}
             >
                 <MenuIcon/>
-                
             </IconButton>
             );
         }
     }
 
-    handleDrawerOpen() {
-        
+    renderNav() {
+        if (this.props.winWidth > 800) {
+            return (
+                <div className="nav-bar">
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/">
+                        Home
+                    </NavLink>
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/about">
+                        About
+                    </NavLink>
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/research">
+                        Research
+                    </NavLink>
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/projects">
+                        Projects
+                    </NavLink>
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/resume">
+                        Resume
+                    </NavLink>
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/contact">
+                        Contact
+                    </NavLink>
+                </div>
+            );
+        }
     }
 
     render() {
-        console.log("height " + this.height);
-        console.log("width " + this.width);
-
         return (
             <div>
                 <AppBar style={this.pickStyle()} elevation={0}>
-                    {this.renderHamburger(this.width)}
+                    {this.renderHamburger()}
                     <Typography className="title-name" variant="h6">
                         Liam M. Murphy
                     </Typography>
-                    <div className="nav-bar">
-                        <NavLink className="nav-link" activeClassName="nav-link-active" to="/">
-                            Home
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="nav-link-active" to="/about">
-                            About
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="nav-link-active" to="/research">
-                            Research
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="nav-link-active" to="/projects">
-                            Projects
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="nav-link-active" to="/resume">
-                            Resume
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="nav-link-active" to="/contact">
-                            Contact
-                        </NavLink>
-                    </div>
+                    {this.renderNav()}
                 </AppBar>
-                <Drawer></Drawer>
+                <Drawer
+                    anchor="left"
+                    variant="temporary"
+                    open={this.props.menuOpen}
+                >
+                    <Box
+                        sx={{width: 250}}
+                        role="presentation"
+                    >
+                        <div className="drawer-root" onClick={this.handleDrawerOpen.bind(this)}>
+                            <div className="drawer-top">
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={this.handleDrawerOpen.bind(this)}
+                                edge="start"
+                                style={{margin: 2}}
+                            >
+                                <MenuIcon style={{color: "white"}}/>
+                            </IconButton>
+                            </div>
+                            <div className="drawer-nav">
+                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/">
+                                    Home
+                                </NavLink>
+                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/about">
+                                    About
+                                </NavLink>
+                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/research">
+                                    Research
+                                </NavLink>
+                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/projects">
+                                    Projects
+                                </NavLink>
+                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/resume">
+                                    Resume
+                                </NavLink>
+                                <NavLink className="nav-link-mobile" activeClassName="nav-link-active" to="/contact">
+                                    Contact
+                                </NavLink>
+                            </div>
+                            <Typography className="drawer-copyright" variant="h8">
+                                &copy; 2019-2022 Liam M. Murphy
+                            </Typography>
+                        </div>
+
+                    </Box>
+                </Drawer>
             </div>
         );
     }
 }
 
-export default TitleBar;
+const mapStateToProps = (state) => {
+    return {
+        winHeight: state.winHeight,
+        winWidth: state.winWidth,
+        menuOpen: state.menuOpen
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators(appActions, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TitleBar);

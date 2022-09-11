@@ -21,7 +21,7 @@ const style = {
         backgroundImage: `url(${lava})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "30vh"
+        height: "30vh",
     },
     paperCard: {
         background: "#383838",

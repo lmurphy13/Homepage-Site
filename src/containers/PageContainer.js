@@ -8,10 +8,10 @@ import Resume from "../components/Resume";
 import Contact from "../components/Contact";
 import ErrorPage from "../components/ErrorPage";
 import Foot from "../components/Foot";
+import * as constants from "../constants";
+import { connect } from "react-redux";
 
 class PageContainer extends React.Component {
-
-
     renderPage() {
         switch(this.props.page) {
             case "about": return ( <About/> );
@@ -21,6 +21,12 @@ class PageContainer extends React.Component {
             case "contact": return ( <Contact/> );
             default:
                 return ( <ErrorPage code="404" />);
+        }
+    }
+
+    displayFooter() {
+        if (this.props.winWidth > constants.BREAK_WIDTH) {
+            return (<Foot/>)
         }
     }
 
@@ -37,11 +43,18 @@ class PageContainer extends React.Component {
                 <div className="root">
                     <TitleBar/>
                     {this.renderPage()}
-                    <Foot/>
+                    {this.displayFooter()}
                 </div>
             );
         }
     }
 }
 
-export default PageContainer;
+const mapStateToProps = (state) => {
+    return {
+        winHeight: state.winHeight,
+        winWidth: state.winWidth
+    }
+};
+
+export default connect(mapStateToProps)(PageContainer);
