@@ -186,3 +186,8 @@ html {
     color: #ffffff;
     padding-top: 2em;
 }
+
+.grid-img {
+    width: 10rem;
+    margin-left: 8rem;
+}
