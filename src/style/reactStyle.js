@@ -1,6 +1,5 @@
 import lava from "../images/lava.jpg";
 
-
 /* 
  * This module is used to define styling to React
  * components that seem to really dislike CSS.
