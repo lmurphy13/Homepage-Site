@@ -30,6 +30,11 @@ const style = {
         background: "#383838",
         minHeight: "10rem",
         width: "8em"
+    },
+    paperCardMobile: {
+        background: "#383838",
+        minHeight: "6.25rem",
+        width: "6.25rem"
     }
 }
 

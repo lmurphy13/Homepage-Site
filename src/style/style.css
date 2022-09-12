@@ -78,6 +78,8 @@ html {
 
 .page-content-container {
     width: 100vw;
+    margin-top: 2em;
+    padding-bottom: 2em;
 }
 
 .foot {
@@ -123,6 +125,20 @@ html {
     color: #5994ee;
 }
 
+.centered-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.centered-text a {
+    color: #5994ee;
+}
+
+.centered-text a:visited {
+    color: #5994ee;
+}
+
 .title-bar {
     display: flex;
     flex-direction: row;
@@ -135,7 +151,7 @@ html {
 }
 
 .page-title {
-    margin-left: 10%;
+    text-align: center;
 }
 
 .drawer-root {
@@ -152,10 +168,11 @@ html {
     flex-direction: row;
     min-height: 60px;
     max-height: 60px;
+    justify-content: right;
 }
 
 .drawer-nav {
-    margin-left: 2em;
+    margin-left: 5em;
     margin-top: 1.25em;
     display: flex;
     flex-direction: column;

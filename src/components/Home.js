@@ -12,7 +12,7 @@ class Home extends React.Component {
     displayIntro() {
         if (this.props.winWidth > constants.BREAK_WIDTH) {
             return (
-                <Grid className="grid-container" style={{marginTop: "2em"}} container>
+                <Grid className="grid-container" container>
                     <Grid item xs={4}>
                         <img className="liamimg" src={liam} alt="liam"></img>
                     </Grid>
