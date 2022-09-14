@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { connect } from "react-redux";
 import * as constants from "../constants";
+import thesis from "../assets/Thesis.pdf";
 
 class Research extends React.Component {
     
@@ -41,7 +42,7 @@ class Research extends React.Component {
                             <p>
                                 This thesis was successfully defended on April 1st, 2022. The full-text document can be found on {" "}
                                 <a href="https://www.proquest.com/docview/2658279769/9925D60F56E04A36PQ/15?accountid=100&parentSessionId=a%2FLZvm5eV3O0fikN3IKrciJ4ceOR73KnPdsqWu3tpOA%3D" target="_blank" rel="noreferrer">ProQuest</a> 
-                                , with access provided through Marquette University. You can also view the full PDF <a href="../assets/LiamMurphyResume2022.pdf" target="_blank" rel="noreferrer">here</a>.
+                                , with access provided through Marquette University. You can also view the full PDF <a href={thesis} target="_blank" rel="noreferrer">here</a>.
                             </p>
                             <br/>
 
@@ -90,7 +91,7 @@ class Research extends React.Component {
                             <p>
                                 This thesis was successfully defended on April 1st, 2022. The full-text document can be found on {" "}
                                 <a href="https://www.proquest.com/docview/2658279769/9925D60F56E04A36PQ/15?accountid=100&parentSessionId=a%2FLZvm5eV3O0fikN3IKrciJ4ceOR73KnPdsqWu3tpOA%3D" target="_blank" rel="noreferrer">ProQuest</a> 
-                                , with access provided through Marquette University. You can also view the full PDF <a href="../assets/LiamMurphyResume2022.pdf" target="_blank" rel="noreferrer">here</a>.
+                                , with access provided through Marquette University. You can also view the full PDF <a href={thesis} target="_blank" rel="noreferrer">here</a>.
                             </p>
 
                             <h3 className="page-title">Undergraduate</h3>
