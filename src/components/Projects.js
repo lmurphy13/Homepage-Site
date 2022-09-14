@@ -4,7 +4,9 @@ class Projects extends React.Component {
     render() {
         return (
             <div className="page-content-container">
-                <h1>Hello</h1>
+                <h2 className="page-title">Projects</h2>
+
+                <p className="centered-text">Coming Eventually...</p>
             </div>
         );
     }
