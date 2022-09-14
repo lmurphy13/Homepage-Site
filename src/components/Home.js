@@ -26,7 +26,7 @@ class Home extends React.Component {
                             <a 
                                 href="https://www.marquette.edu/computer-science/graduate-program-computing.php"
                                 target="_blank"
-                                rel="noreferrer">M.S. in Computing</a> {" "}
+                                rel="noreferrer">Master of Science in Computing</a> {" "}
                                 with a concentration in Information Assurance and Cyber Defense in May 2022.
                         </p>
                         <p>
@@ -52,7 +52,7 @@ class Home extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid className="grid-container" container>
-                        <Grid item xs={11}>
+                        <Grid item xs={10}>
                             <p>
                                 I am a graduate of {" "}
                                 <a 
@@ -62,7 +62,7 @@ class Home extends React.Component {
                                 <a 
                                     href="https://www.marquette.edu/computer-science/graduate-program-computing.php"
                                     target="_blank"
-                                    rel="noreferrer">M.S. in Computing</a> {" "}
+                                    rel="noreferrer">Master of Science in Computing</a> {" "}
                                     with a concentration in Information Assurance and Cyber Defense in May 2022.
                             </p>
                             <p>
