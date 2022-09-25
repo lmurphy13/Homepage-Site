@@ -2,7 +2,6 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { connect } from "react-redux";
 import * as constants from "../constants";
-import thesis from "../assets/Thesis.pdf";
 
 class Research extends React.Component {
     

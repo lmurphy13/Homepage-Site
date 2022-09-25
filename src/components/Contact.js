@@ -11,7 +11,7 @@ import * as constants from "../constants";
 class Contact extends React.Component {
     render() {
 
-        let containerStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {columnGap: "4.5em", marginLeft: "-1.5em"} : {};
+        let containerStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {columnGap: "4.5em", marginLeft: "-1.5em"} : {columnGap: "50px"};
         let paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.paperCardMobile : reactStyle.paperCard;
         let iconStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {color: "#ffffff", fontSize: "100", textAlign: "center"} : 
             {color: "#ffffff", fontSize: "150", textAlign: "center"};
