@@ -8,6 +8,7 @@ import Resume from "../components/Resume";
 import Contact from "../components/Contact";
 import ErrorPage from "../components/ErrorPage";
 import Foot from "../components/Foot";
+import Trek from "../components/trek/Trek";
 import * as constants from "../constants";
 import { connect } from "react-redux";
 
@@ -37,6 +38,12 @@ class PageContainer extends React.Component {
                     <Home/>
                 </div>
             );
+        } else if (this.props.page === "trek") {
+            return (
+                <>
+                    <Trek />
+                </>
+            )
         } else {
             return (
                 <div className="root">
