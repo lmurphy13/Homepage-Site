@@ -93,6 +93,7 @@ class Research extends React.Component {
                                 <a href="https://www.proquest.com/docview/2658279769/9925D60F56E04A36PQ/15?accountid=100&parentSessionId=a%2FLZvm5eV3O0fikN3IKrciJ4ceOR73KnPdsqWu3tpOA%3D" target="_blank" rel="noreferrer">ProQuest</a> 
                                 , with access provided through Marquette University.
                             </p>
+                            <br/>
 
                             <h3 className="page-title">Undergraduate</h3>
                             <p>

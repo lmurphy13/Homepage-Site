@@ -34,7 +34,7 @@ class Home extends React.Component {
                             in Spanish in May 2021.
                         </p>
                         <p>
-                            Since June 2021, I have been working as a Software Engineer at 
+                            Since June 2021, I have been working as a Software Engineer at {" "}
                             <a 
                                 href="https://www.astronautics.com"
                                 target="_blank"
@@ -70,7 +70,7 @@ class Home extends React.Component {
                                 in Spanish in May 2021.
                             </p>
                             <p>
-                                Since June 2021, I have been working as a Software Engineer at 
+                                Since June 2021, I have been working as a Software Engineer at {" "}
                                 <a 
                                     href="https://www.astronautics.com"
                                     target="_blank"
