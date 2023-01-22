@@ -33,7 +33,20 @@ const style = {
     paperCardMobile: {
         background: "#383838",
         minHeight: "6.25rem",
-        width: "6.25rem"
+        color: "white",
+        width: "18rem"
+    },
+    paperCardLarge: {
+        background: "#383838",
+        minHeight: "15rem",
+        color: "white",
+    },
+    projectFooter: {
+        padding: "0.7rem",
+        display: "flex",
+        alignItems: "flex-end",
+        columnGap: "0.5rem",
+        justifyContent: "space-between"
     }
 }
 

@@ -5,7 +5,7 @@ class Foot extends React.Component {
         return (
             <div className="foot">
                 <p>
-                    &copy; 2019-2022 Liam M. Murphy
+                    &copy; 2019-2023 Liam M. Murphy
                 </p>
             </div>
         );
