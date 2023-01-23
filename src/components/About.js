@@ -30,8 +30,7 @@ class About extends React.Component {
                     </Grid>
                     <Grid item xs={10}>
                         <p>
-                            Current goals of mine include going back to school to earn a Ph.D. in Computer Science, travelling,
-                            and learning to play the piano.
+                            Current goals of mine include traveling and learning to play the piano.
                         </p>
                         <p>
                             Fun fact: I already know how to play the bagpipes, and have been
