@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Box, Drawer, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
-import lava from "../images/lava.jpg";
+import lava from "../images/lava_clean.jpg";
 import { bindActionCreators } from "redux";
 import * as appActions from "../actions/appActions";
 import { connect } from "react-redux";
@@ -163,7 +163,7 @@ class TitleBar extends React.Component {
                                 </NavLink>
                             </div>
                             <Typography className="drawer-copyright" variant="h8">
-                                &copy; 2019-2022 Liam M. Murphy
+                                &copy; 2019-2023 Liam M. Murphy
                             </Typography>
                         </div>
                     </Box>
