@@ -1,4 +1,4 @@
-import lava from "../images/lava.jpg";
+import lava from "../images/lava_clean.jpg";
 
 /* 
  * This module is used to define styling to React
