@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { connect } from "react-redux";
 import * as constants from "../constants";
 import ProjectCard from "./ProjectCard";
