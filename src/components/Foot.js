@@ -7,6 +7,7 @@ class Foot extends React.Component {
                 <p>
                     &copy; 2019-2023 Liam M. Murphy
                 </p>
+                <br/>
             </div>
         );
     }

@@ -2,7 +2,6 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { Paper } from "@mui/material";
 import reactStyle from "../style/reactStyle";
 import { connect } from "react-redux";
@@ -20,7 +19,7 @@ class Contact extends React.Component {
             <div className="page-content-container">
                 <h2 className="page-title">Contact Information</h2>
                 <p className="centered-text">
-                    If you'd like to contact me, please visit my various professional pages and social media.
+                    If you'd like to contact me, please visit my various professional pages.
                 </p>
                 <br/>
                 <Grid className="grid-container" style={containerStyle} container>
@@ -35,13 +34,6 @@ class Contact extends React.Component {
                         <Paper style={paperStyle} elevation={3}>
                             <a href="https://www.linkedin.com/in/liam-murphy-05244114b/" target="_blank" rel="noreferrer">
                                 <LinkedInIcon style={iconStyle} />
-                            </a>
-                        </Paper>
-                    </Grid>
-                    <Grid item xs={1.3}>
-                        <Paper style={paperStyle} elevation={3}>
-                            <a href="https://twitter.com/lmurphy513" target="_blank" rel="noreferrer">
-                                <TwitterIcon style={iconStyle} />
                             </a>
                         </Paper>
                     </Grid>

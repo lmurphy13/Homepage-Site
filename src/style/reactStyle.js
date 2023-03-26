@@ -34,7 +34,7 @@ const style = {
         background: "#383838",
         minHeight: "6.25rem",
         color: "white",
-        width: "18rem"
+        width: "6.2rem"
     },
     paperCardLarge: {
         background: "#383838",
