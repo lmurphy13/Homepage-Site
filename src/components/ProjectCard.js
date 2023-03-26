@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 import { Paper } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -10,7 +12,6 @@ class ProjectCard extends React.Component {
     render() {
         let paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.paperCardMobile : reactStyle.paperCardLarge;
         let iconStyle = {color: "#ffffff", fontSize: "50", textAlign: "center", marginBottom: "-0.6rem"};
-           
 
         let languages = [];
         this.props.langs.forEach((lang) => {

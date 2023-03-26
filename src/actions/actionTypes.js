@@ -1,3 +1,4 @@
+// Copyright (c) 2023 Liam M. Murphy
 // Action Types
 
 export const SET_WIN_HEIGHT = 'SET_WIN_HEIGHT';

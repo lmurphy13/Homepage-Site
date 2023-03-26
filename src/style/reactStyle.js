@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import lava from "../images/lava_clean.jpg";
 
 /* 
@@ -34,7 +36,7 @@ const style = {
         background: "#383838",
         minHeight: "6.25rem",
         color: "white",
-        width: "18rem"
+        width: "6.2rem"
     },
     paperCardLarge: {
         background: "#383838",

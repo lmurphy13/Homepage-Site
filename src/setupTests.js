@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)

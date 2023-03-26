@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import * as actions from "./actionTypes"
 
 export function setWinHeight(height) {
