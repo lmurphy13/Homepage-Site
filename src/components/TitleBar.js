@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 import { AppBar, Box, Drawer, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";

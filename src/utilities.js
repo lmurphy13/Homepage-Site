@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 export function getWindowDimensions() {
     const hasWindow = typeof window !== 'undefined';
     const width = hasWindow ? window.innerWidth : null;

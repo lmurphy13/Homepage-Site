@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import PageContainer from "../containers/PageContainer";

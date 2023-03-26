@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 import { Paper } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';

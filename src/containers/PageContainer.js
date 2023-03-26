@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 import TitleBar from "../components/TitleBar";
 import Home from "../components/Home";

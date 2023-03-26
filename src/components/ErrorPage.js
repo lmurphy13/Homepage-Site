@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 
 class ErrorPage extends React.Component {

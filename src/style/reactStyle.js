@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import lava from "../images/lava_clean.jpg";
 
 /* 

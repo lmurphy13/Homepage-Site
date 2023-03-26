@@ -1,3 +1,5 @@
+// Copyright (c) 2023 Liam M. Murphy
+
 import React from "react";
 import Grid from "@mui/material/Grid";
 import resume from "../assets/LiamMurphyResumeMarch2023.pdf";
