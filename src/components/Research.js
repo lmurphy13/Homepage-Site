@@ -4,6 +4,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { connect } from "react-redux";
 import * as constants from "../constants";
+import thesis from "../assets/LiamMurphyThesis.pdf";
 
 class Research extends React.Component {
     
@@ -42,7 +43,13 @@ class Research extends React.Component {
                         </p>
 
                         <p>
-                            This thesis was successfully defended on April 1st, 2022. The full-text document can be found on {" "}
+                            This thesis was successfully defended on April 1st, 2022. You can download a PDF version below:
+                            <br/><br/>
+                            <i>Improving Compiler Construction Education by Retargeting and Extending a Compiler for Embedded Xinu</i>. Marquette University, May 2022. {" "}
+                            <a href={thesis} target="_blank" rel="noreferrer">Link</a>
+                            
+                            <br/><br/>
+                            Additionally, the full-text document can be found on {" "}
                             <a href="https://www.proquest.com/docview/2658279769/9925D60F56E04A36PQ/15?accountid=100&parentSessionId=a%2FLZvm5eV3O0fikN3IKrciJ4ceOR73KnPdsqWu3tpOA%3D" target="_blank" rel="noreferrer">ProQuest</a> 
                             , with access provided through Marquette University.
                         </p>
