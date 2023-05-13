@@ -67,7 +67,6 @@ class TitleBar extends React.Component {
         } else {
             this.props.actions.setMenuOpen();
         }
-        console.log("Drawer is " + this.props.menuOpen)
     }
 
     renderHamburger() {

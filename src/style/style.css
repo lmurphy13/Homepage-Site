@@ -170,8 +170,11 @@ html {
     flex-direction: column;
     background: #252525;
     height: 100vh;
+    max-height: 100vh;
     font-family: IBM Plex Sans, sans-serif;
-    overflow-y:scroll;
+    overflow-y: hidden;
+    position: fixed;
+    width: 250px;
 }
 
 .drawer-top {
