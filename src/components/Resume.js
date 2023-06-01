@@ -2,7 +2,7 @@
 
 import React from "react";
 import Grid from "@mui/material/Grid";
-import resume from "../assets/LiamMurphyResumeMarch2023.pdf";
+import resume from "../assets/LiamMurphyResumeJune2023.pdf";
 import { connect } from "react-redux";
 import * as constants from "../constants";
 
