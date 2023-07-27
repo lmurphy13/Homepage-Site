@@ -20,11 +20,11 @@ class Projects extends React.Component {
             marginTop: "1rem",
             justifyContent: "center",
             alignItems: "center",
-            fontSize: "1.2rem",
+            fontSize: "1.2rem"
         }
 
         let containerStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? mobileContainerStyle : desktopContainerStyle;
-        
+
         return (
             <div className="page-content-container">
                 <h2 className="page-title">Projects</h2>
@@ -35,7 +35,7 @@ class Projects extends React.Component {
                             title="LBASIC Compiler"
                             desc="A simple, compiled language with syntax inspired by C and BASIC."
                             link="https://github.com/lmurphy13/LBASIC"
-                            langs={["C", "Flex", "Bison"]}
+                            langs={["C"]}
                         >
                         </ProjectCard>
                     </Grid>

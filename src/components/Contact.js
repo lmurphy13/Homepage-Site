@@ -12,9 +12,9 @@ import * as constants from "../constants";
 class Contact extends React.Component {
     render() {
 
-        let containerStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {columnGap: "4.5em", marginLeft: "-1.5em"} : {};
-        let paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.paperCardMobile : reactStyle.paperCard;
-        let iconStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {color: "#ffffff", fontSize: "100", textAlign: "center"} : 
+        let containerStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {columnGap: "4.5em", rowGap: "2rem"} : {};
+        let paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.contactCardMobile : reactStyle.contactPaperCard;
+        let iconStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {color: "#ffffff", fontSize: "150", textAlign: "center"} :
             {color: "#ffffff", fontSize: "150", textAlign: "center"};
 
         return (
@@ -24,7 +24,7 @@ class Contact extends React.Component {
                     If you'd like to contact me, please visit my various professional pages.
                 </p>
                 <br/>
-                <Grid className="grid-container" style={containerStyle} container>
+                <Grid className="grid-container" style={containerStyle} container direction={(this.props.winWidth < constants.BREAK_WIDTH) ? "column" : ""}>
                     <Grid item xs={1.3}>
                         <Paper style={paperStyle} elevation={3}>
                             <a href="https://www.github.com/lmurphy13" target="_blank" rel="noreferrer">

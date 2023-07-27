@@ -36,9 +36,25 @@ const style = {
         background: "#383838",
         minHeight: "6.25rem",
         color: "white",
-        width: "6.2rem"
+        width: "21rem"
     },
     paperCardLarge: {
+        background: "#383838",
+        minHeight: "15rem",
+        color: "white",
+    },
+    contactPaperCard: {
+        background: "#383838",
+        minHeight: "10rem",
+        width: "8em"
+    },
+    contactCardMobile: {
+        background: "#383838",
+        minHeight: "6.25rem",
+        color: "white",
+        width: "9.3rem"
+    },
+    contactCardLarge: {
         background: "#383838",
         minHeight: "15rem",
         color: "white",
