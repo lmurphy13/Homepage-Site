@@ -17,7 +17,7 @@ class Contact extends React.Component {
         const paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.contactCardMobile : reactStyle.contactPaperCard;
         const iconStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {color: "#ffffff", fontSize: "150", textAlign: "center"} :
             {color: "#ffffff", fontSize: "150", textAlign: "center"};
-        const imageStyle = {width: "95%", height: "95%", marginTop: "0.5rem"};
+        const imageStyle = {width: "90%", height: "90%", marginTop: "0.8rem", marginLeft: "0.5rem", marginRight: "0.5rem"};
 
         return (
             <div className="page-content-container">
