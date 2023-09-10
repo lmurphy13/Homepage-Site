@@ -15,8 +15,7 @@ class Contact extends React.Component {
 
         const containerStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {columnGap: "4.5em", rowGap: "2rem"} : {columnGap: "3.5em"};
         const paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.contactCardMobile : reactStyle.contactPaperCard;
-        const iconStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? {color: "#ffffff", fontSize: "150", textAlign: "center"} :
-            {color: "#ffffff", fontSize: "150", textAlign: "center"};
+        const iconStyle = {color: "#ffffff", width: "100%", height: "100%", textAlign: "center"};
         const imageStyle = {width: "90%", height: "90%", marginTop: "0.8rem", marginLeft: "0.5rem", marginRight: "0.5rem"};
 
         return (
