@@ -61,6 +61,7 @@ const style = {
     },
     projectFooter: {
         padding: "0.7rem",
+        marginTop: "2.5rem",
         display: "flex",
         alignItems: "flex-end",
         columnGap: "0.5rem",

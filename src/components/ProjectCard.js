@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 class ProjectCard extends React.Component {
     render() {
         let paperStyle = (this.props.winWidth < constants.BREAK_WIDTH) ? reactStyle.paperCardMobile : reactStyle.paperCardLarge;
-        let iconStyle = {color: "#ffffff", fontSize: "50", textAlign: "center", marginBottom: "-0.6rem"};
+        let iconStyle = {color: "#ffffff", fontSize: "170%", textAlign: "center", marginBottom: "-0.5rem"};
 
         let languages = [];
         this.props.langs.forEach((lang) => {
@@ -26,7 +26,6 @@ class ProjectCard extends React.Component {
                     {this.props.desc}
                 </p>
 
-                <br></br>
                 <div style={reactStyle.projectFooter}>
                     <div style={{display: "flex", flexDireciton: "row", columnGap: "0.45rem"}}>
                         {languages}
