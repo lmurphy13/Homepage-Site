@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Liam M. Murphy
+// Copyright (c) 2023-2024 Liam M. Murphy
 
 import React from "react";
 import Grid from "@mui/material/Grid";
@@ -21,6 +21,14 @@ class Contact extends React.Component {
         return (
             <div className="page-content-container">
                 <h2 className="page-title">Contact Information</h2>
+                <p className="centered-text">
+                    Email me: <code>liammurphy513 at gmail dot com</code>.
+                </p>
+
+                <p className="centered-text">
+                    or
+                </p>
+
                 <p className="centered-text">
                     Check out my socials below to see what I'm up to!
                 </p>

@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Liam M. Murphy
+// Copyright (c) 2023-2024 Liam M. Murphy
 
 import React from "react";
 
@@ -7,7 +7,7 @@ class Foot extends React.Component {
         return (
             <div className="foot">
                 <p>
-                    &copy; 2019-2023 Liam M. Murphy
+                    &copy; 2019-2024 Liam M. Murphy
                 </p>
                 <br/>
             </div>
