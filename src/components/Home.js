@@ -38,7 +38,7 @@ class Home extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid className="grid-container" container>
-                        <Grid item xs={10}>
+                        <Grid item xs={8.5}>
                             {intro_line}
                             <br/>
                         </Grid>
