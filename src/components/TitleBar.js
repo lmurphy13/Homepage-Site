@@ -164,7 +164,7 @@ class TitleBar extends React.Component {
                                 </NavLink>
                             </div>
                             <Typography className="drawer-copyright" variant="h8">
-                                &copy; 2019-2023 Liam M. Murphy
+                                &copy; 2019-2024 Liam M. Murphy
                             </Typography>
                         </div>
                     </Box>
