@@ -84,6 +84,42 @@ html {
     padding-bottom: 2em;
 }
 
+.page-content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 40vw;
+}
+
+.page-content-p {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.page-content a {
+    color: #5994ee;
+}
+
+.page-content a:visited {
+    color: #5994ee;
+}
+
+.page-content a:hover {
+    color: #2b6bca;
+}
+
+.page-content-table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-content-table td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    padding: 0.5em;
+}
+
 .foot {
     text-align: center;
     margin-left: auto;

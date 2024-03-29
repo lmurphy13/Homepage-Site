@@ -14,7 +14,7 @@ class Home extends React.Component {
     displayIntro() {
         const intro_line = 
             <p>
-                I am a Software Engineer II at <a href="https://www.astronautics.com" target="_blank" rel="noreferrer"> Astronautics Corp. of America</a>, 
+                I am a Software Engineer II at <a href="https://www.astronautics.com" target="_blank" rel="noreferrer"> Astronautics Corporation of America</a>, 
                 developing embedded and web applications for a line of airborne servers.
             </p>;
 
