@@ -1,0 +1,136 @@
+/* Copyright (c) 2024 - Liam M. Murphy */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  background: #2e2d2d;
+  color: white;
+  margin: 0;
+  font-family: IBM Plex Sans, sans-serif;
+}
+
+body {
+  padding: 0;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #3f3f3f;
+  overflow-x: hidden;
+}
+
+.custom-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  align-content: center;
+  padding: 2rem;
+}
+
+.custom-image {
+  width: 12.5em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.custom-footer {
+  width: 100%;
+  text-align: center;
+  font-size: smaller;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.nav-menu {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 0.9em;
+  text-align: center;
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #005fdb;
+  font-weight: bold;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  padding: 2.5rem;
+  overflow-wrap: break-word;
+}
+
+.page-content p {
+  margin-top: auto;
+  margin-bottom: 1em;
+  margin-left: 10em;
+  margin-right: 10em;
+  text-align: left;
+}
+
+.page-content h2 {
+  margin-left: 6.6em;
+  margin-bottom: 0.5em;
+}
+
+.page-content a {
+  color: #5994ee;
+}
+
+.page-content a:visited {
+  color: #5994ee;
+}
+
+.page-content a:hover {
+  color: #2b6bca;
+}
+
+.resume {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+  height: 40vh;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+  }
+
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 2.5rem;
+    overflow-wrap: break-word;
+  }
+
+  /* Reset p styling on mobile */
+  .page-content p {
+    all: unset;
+    margin-bottom: 1em;
+  }
+
+  .page-content h2 {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
