@@ -10,7 +10,7 @@ class PageContent extends React.Component {
             case "home": return (<Home/>);
             case "about": return (<About/>);
             default:
-                return (<span>Unimplemented page</span>);
+                return (<p className="error-404">Uh Oh! Page Not Found!</p>);
         }
     }
 

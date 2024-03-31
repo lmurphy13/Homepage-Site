@@ -2,8 +2,7 @@
 
 import Page from './components/Page';
 import {Route, Routes} from 'react-router-dom';
-
-import './css/App.css';
+import './css/style.css';
 
 function App() {
   return (
