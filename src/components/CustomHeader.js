@@ -1,8 +1,8 @@
 /* Copyright (c) 2024 - Liam M. Murphy */
 
-import React from 'react';
-import Nav from './Nav';
-import lava from '../media/lava_clean.jpg';
+import React from "react";
+import Nav from "./Nav";
+import lava from "../media/lava_clean.jpg";
 
 class CustomHeader extends React.Component {
     render() {
@@ -16,7 +16,7 @@ class CustomHeader extends React.Component {
         return (
             <div className="custom-header-container" style={style}>
                 <h1>Liam M. Murphy</h1>
-                <Nav/>
+                <Nav />
             </div>
         );
     }

@@ -1,0 +1,15 @@
+# Ignore
+build
+coverage
+
+# Ignore html
+**/*.html
+
+# Ignore JSON
+**/*.json
+
+# Ignore markdown
+**/*.md
+
+# Ignore CSS
+**/*.css

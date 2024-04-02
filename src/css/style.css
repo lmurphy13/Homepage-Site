@@ -1,135 +1,267 @@
 /* Copyright (c) 2024 - Liam M. Murphy */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 html {
-  background: #2e2d2d;
-  color: white;
-  margin: 0;
-  font-family: IBM Plex Sans, sans-serif;
+    background: #2e2d2d;
+    color: white;
+    margin: 0;
+    font-family: IBM Plex Sans, sans-serif;
 }
 
 body {
-  padding: 0;
-  width: 60vw;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #3f3f3f;
-  overflow-x: hidden;
+    padding: 0;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3f3f3f;
+    overflow-x: hidden;
 }
 
 .custom-header-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-  align-content: center;
-  padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-content: center;
+    padding: 2rem;
 }
 
 .custom-image {
-  width: 12.5em;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
+    width: 12.5em;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.band-image {
+    height: auto;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    image-orientation: from-image;
 }
 
 .custom-footer {
-  width: 100%;
-  text-align: center;
-  font-size: smaller;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .nav-menu {
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  column-gap: 0.9em;
-  text-align: center;
-  width: 100%;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 0.9em;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: large;
 }
 
 .nav-link {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 .nav-link:hover {
-  color: #005fdb;
-  font-weight: bold;
+    color: #005fdb;
+    font-weight: bold;
 }
 
 .page-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: auto;
-  padding: 2.5rem;
-  overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25vw;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
 }
 
 .page-content p {
-  margin-top: auto;
-  margin-bottom: 1em;
-  margin-left: 10em;
-  margin-right: 10em;
-  text-align: left;
+    margin-top: auto;
+    margin-bottom: 1em;
+    /* margin-left: 10em;
+    margin-right: 10em; */
+    text-align: left;
+    width: 100%;
 }
 
 .page-content h2 {
-  margin-left: 6.6em;
-  margin-bottom: 0.5em;
+    /* margin-left: 6.6em; */
+    margin-bottom: 0.5em;
 }
 
 .page-content a {
-  color: #5994ee;
+    color: #5994ee;
 }
 
 .page-content a:visited {
-  color: #5994ee;
+    color: #5994ee;
 }
 
 .page-content a:hover {
-  color: #2b6bca;
+    color: #2b6bca;
+}
+
+.page-content ul {
+    margin-left: 2em;
+}
+
+.page-content-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    overflow-wrap: break-word;
+}
+
+.page-content-centered p {
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.page-content-centered h2 {
+    /* margin-left: 6.6em; */
+    margin-bottom: 0.5em;
+}
+
+.page-content-centered a {
+    color: #5994ee;
+}
+
+.page-content-centered a:visited {
+    color: #5994ee;
+}
+
+.page-content-centered a:hover {
+    color: #2b6bca;
+}
+
+.code-inline {
+    background-color: #141414;
+    color: #19e619;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight:500
 }
 
 .error-404 {
-  text-align: center;
-  font-size: x-large;
-  margin: 3em;
+    text-align: center;
+    font-size: x-large;
+    margin: 3em;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    width: 100vw;
-  }
-
-  .page-content {
+.project-article-container {
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
-    width: auto;
-    padding: 2.5rem;
-    overflow-wrap: break-word;
-  }
+    row-gap: 1.5em;
+}
 
-  /* Reset p styling on mobile */
-  .page-content p {
+.project-article-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #0b4c66; /* fix later */
+    border-radius: 5px;
+    min-width: 10vw;
+    max-width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.project-article-card-title {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 0.9em;
+}
+
+.project-article-card-desc {
     all: unset;
-    margin-bottom: 1em;
-  }
+    width: 100%;
+}
 
-  .page-content h2 {
-    margin-left: unset;
-    margin-right: unset;
-  }
+.project-article-card a {
+    all: unset;
+    color: #19e619;
+    text-decoration: underline;
+}
+
+.project-article-card a:visited {
+    all: unset;
+    color: #19e619;
+    text-decoration: underline;
+}
+
+.project-article-card a:hover {
+    all: unset;
+    color: #179717;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        width: 100vw;
+    }
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 2.5rem;
+        overflow-wrap: break-word;
+    }
+
+    /* Reset p styling on mobile */
+    .page-content p {
+        all: unset;
+        margin-bottom: 1em;
+    }
+
+    .page-content h2 {
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .project-article-card {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        background-color: #0b4c66; /* fix later */
+        border-radius: 5px;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5em;
+    }
+
+    .band-image {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        image-orientation: from-image;
+        /* For some odd reason, this image gets
+         * rotated, 90 degrees. So we need to
+         * rotate it back upright. */
+        /*ransform: rotate(270deg);*/
+    }
 }
