@@ -37,6 +37,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
+    box-shadow: 2px 2px 5px #2e2d2d;
 }
 
 .band-image {
@@ -47,6 +48,7 @@ body {
     margin-top: 1em;
     margin-bottom: 1em;
     image-orientation: from-image;
+    box-shadow: 2px 2px 5px #2e2d2d;
 }
 
 .custom-footer {
@@ -95,14 +97,11 @@ body {
 .page-content p {
     margin-top: auto;
     margin-bottom: 1em;
-    /* margin-left: 10em;
-    margin-right: 10em; */
     text-align: left;
     width: 100%;
 }
 
 .page-content h2 {
-    /* margin-left: 6.6em; */
     margin-bottom: 0.5em;
 }
 
@@ -140,7 +139,6 @@ body {
 }
 
 .page-content-centered h2 {
-    /* margin-left: 6.6em; */
     margin-bottom: 0.5em;
 }
 
@@ -180,7 +178,8 @@ body {
 .project-article-card {
     display: flex;
     flex-direction: column;
-    background-color: #0b4c66; /* fix later */
+    background-color: #0b4266;
+    box-shadow: 2px 2px 5px #2e2d2d;
     border-radius: 5px;
     min-width: 10vw;
     max-width: 20vw;
@@ -257,7 +256,8 @@ body {
         all: unset;
         display: flex;
         flex-direction: column;
-        background-color: #0b4c66; /* fix later */
+        background-color: #0b4266;
+        box-shadow: 2px 2px 5px #2e2d2d;
         border-radius: 5px;
         width: 70vw;
         margin-left: auto;
@@ -267,9 +267,5 @@ body {
 
     .band-image {
         width: 60vw;
-        /* For some odd reason, this image gets
-         * rotated, 90 degrees. So we need to
-         * rotate it back upright. */
-        /*ransform: rotate(270deg);*/
     }
 }
