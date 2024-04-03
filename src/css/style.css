@@ -84,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 25vw;
+    width: 35vw;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     margin-left: auto;
@@ -219,6 +219,16 @@ body {
     text-decoration: underline;
 }
 
+.contact-table {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+
+.contact-table td {
+    padding: 0.5em;
+    border: 1px solid #fff;
+}
+
 @media only screen and (max-width: 800px) {
     body {
         width: 100vw;
@@ -256,9 +266,7 @@ body {
     }
 
     .band-image {
-        margin-top: 3em;
-        margin-bottom: 3em;
-        image-orientation: from-image;
+        width: 60vw;
         /* For some odd reason, this image gets
          * rotated, 90 degrees. So we need to
          * rotate it back upright. */

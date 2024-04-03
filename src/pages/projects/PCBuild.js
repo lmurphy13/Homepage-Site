@@ -1,6 +1,7 @@
 /* Copyright (c) 2024 - Liam M. Murphy */
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 class PCBuild extends React.Component {
     render() {
@@ -8,7 +9,9 @@ class PCBuild extends React.Component {
             <div className="page-content">
                 <h2>Linux PC Build</h2>
 
-                <p>I will write about this later.</p>
+
+
+                <Link to="/projects">Go back</Link>
             </div>
         );
     }

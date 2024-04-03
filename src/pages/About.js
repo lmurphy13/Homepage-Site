@@ -26,8 +26,8 @@ class About extends React.Component {
                 </p>
                 <p>
                     As a graduate student, I completed my <a href={thesis} download="LiamMurphyThesis.pdf">thesis</a> under the guidance of <a href="https://www.cs.mu.edu/~brylow/">Dr. Dennis Brylow</a>,
-                    where I retargeted an Embedded MiniJava compiler from MIPS to the Raspberry Pi 3 B+ (ARMv7) platform and added access modifiers to the language, extending the compatability
-                    to the ARM version of <a href="https://www.cs.mu.edu/~brylow/xinu/">Embedded Xinu</a> for use in classroom instruction.
+                    where I retargeted an Embedded MiniJava compiler from MIPS to the Raspberry Pi 3 B+ (ARMv7) platform and added access modifiers to the language.
+                    This extended the compatability of MiniJava to the ARM version of <a href="https://www.cs.mu.edu/~brylow/xinu/">Embedded Xinu</a> for use in classroom instruction.
                 </p>
 
                 <h2>Other stuff</h2>
@@ -35,6 +35,15 @@ class About extends React.Component {
                     I am a musician. I have been playing the highland bagpipes since I was 10 years old, and with the {" "}
                     <a href="https://shannonrovers.com/">Shannon Rovers Irish Pipe Band</a> since 2012. I wanted a new challenge, so
                     in January 2024 I began taking piano lessons at the Wisconsin Conservatory of Music.
+                </p>
+
+                <p>
+                    My other hobbies include reading, bowling, gaming, watching shows/movies, and attempting to cook. I also try to
+                    work on personal side-projects from time to time.
+                </p>
+
+                <p>
+                    My science fiction franchise of choice is <i>Star Trek</i>, though, I am partial to many others.
                 </p>
 
                 <img className="band-image" src={bandpic} alt="liam and tim shannon rovers"/>
