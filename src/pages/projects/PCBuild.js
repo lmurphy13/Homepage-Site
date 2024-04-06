@@ -165,32 +165,51 @@ class PCBuild extends React.Component {
                 </p>
 
                 <h3>Part 3: Configuring the kernel for PCI passthrough</h3>
-                <p>This page is not meant to be a tutorial, but I'll mention some of the important parts to get this working.</p>
                 <p>
-                    First, you must add a few kernel command line arguments within your bootloader. I use GRUB. In my GRUB config (<code className="code-inline">/etc/default/grub</code>),
+                    This page is not meant to be a tutorial, but I'll mention
+                    some of the important parts to get this working.
+                </p>
+                <p>
+                    First, you must add a few kernel command line arguments
+                    within your bootloader. I use GRUB. In my GRUB config (
+                    <code className="code-inline">/etc/default/grub</code>),
                     I've added the following line:
                 </p>
 
                 <code className="code-block">
-                    GRUB_CMDLINE_LINUX_DEFAULT="rhgb quiet intel_iommu=on iommu=pt kvm.ignore_msrs=1 default_hugepagesz=1G hugepagesz=1G hugepages=32"
+                    GRUB_CMDLINE_LINUX_DEFAULT="rhgb quiet intel_iommu=on
+                    iommu=pt kvm.ignore_msrs=1 default_hugepagesz=1G
+                    hugepagesz=1G hugepages=32"
                 </code>
 
                 <p>
-                    For my Intel processor, I set <code className="code-inline">intel_iommu=on</code>. I've read that <code className="code-inline">iommu=pt</code>
-                    is good for improving the guest VM's performance, though I don't really know what it does. Likewise, setting up hugepages is good for
-                    improving performance of the VM.
+                    For my Intel processor, I set{" "}
+                    <code className="code-inline">intel_iommu=on</code>. I've
+                    read that <code className="code-inline">iommu=pt</code>
+                    is good for improving the guest VM's performance, though I
+                    don't really know what it does. Likewise, setting up
+                    hugepages is good for improving performance of the VM.
                 </p>
 
                 <h3>Part 4: Isolating the NVIDIA GPU</h3>
                 <p>
-                    Now that the kernel has IOMMU turned on, we can begin to isolate the GPU. Refer to section 3 of the Arch Wiki (listed below) for the necessary steps according to your
-                    specific setup. In my case, I had to figure out which PCI devices belonged to the NVIDIA card and set up the correct modprobe configuration. These PCI devices
-                    should belong to thee same IOMMU group. To find these groups, run the script provided in section 2.2 of the Arch Wiki.
-                    Once that was complete, everything just worked.
+                    Now that the kernel has IOMMU turned on, we can begin to
+                    isolate the GPU. Refer to section 3 of the Arch Wiki (listed
+                    below) for the necessary steps according to your specific
+                    setup. In my case, I had to figure out which PCI devices
+                    belonged to the NVIDIA card and set up the correct modprobe
+                    configuration. These PCI devices should belong to the same
+                    IOMMU group. To find these groups, run the script provided
+                    in section 2.2 of the Arch Wiki. Once that was complete,
+                    everything just worked.
                 </p>
 
                 <p>
-                    For example, below is my <code className="code-inline">/etc/modprobe.d/vfio.conf</code> file:
+                    For example, below is my{" "}
+                    <code className="code-inline">
+                        /etc/modprobe.d/vfio.conf
+                    </code>{" "}
+                    file:
                 </p>
 
                 <code className="code-block">
@@ -199,27 +218,59 @@ class PCBuild extends React.Component {
 
                 <h3>Part 5: Setting up Windows 11</h3>
                 <p>
-                    I use <a href="https://virt-manager.org/">Virt Manager (Virtual Machine Manager)</a> to manage my QEMU/KVM virtual machines. The setup process is fairly simple.
-                    Create a new VM, allocate some memory, a virtual hard disk image, etc. Then, add the isolated GPU as a PCI device. Install Windows 11 as usual, and away you go.
+                    I use{" "}
+                    <a href="https://virt-manager.org/">
+                        Virt Manager (Virtual Machine Manager)
+                    </a>{" "}
+                    to manage my QEMU/KVM virtual machines. The setup process is
+                    fairly simple. Create a new VM, allocate some memory, a
+                    virtual hard disk image, etc. Then, add the isolated GPU as
+                    a PCI device. Install Windows 11 as usual, and away you go.
                 </p>
 
                 <p>
-                    <strong>Hey!</strong> It is really important to realize something. Once your GPU is isolated to the VM, you need to connect a spare monitor to your graphics card.
-                    Do NOT use the VM's virtual display. The whole point is to use the physical GPU with the VM, and that includes any spare HDMI or DVI ports.
+                    <strong>Hey!</strong> It is really important to realize
+                    something. Once your GPU is isolated to the VM, you need to
+                    connect a spare monitor to your graphics card. Do NOT use
+                    the VM's virtual display. The whole point is to use the
+                    physical GPU with the VM, and that includes any spare HDMI
+                    or DVI ports.
                 </p>
 
                 <p>
-                    Once you're up and running, there are a bunch of tweaks you can make to tailor your system to your needs. I've done a few things, like enable hugepages and CPU core pinning,
+                    Once you're up and running, there are a bunch of tweaks you
+                    can make to tailor your system to your needs. I've done a
+                    few things, like enable hugepages and CPU core pinning,
                     which have increased performance and stability immensely.
                 </p>
 
                 <h3>Sources</h3>
                 <ul>
-                    <li><a href="https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF">PCI passthrough via OVMF</a></li>
-                    <li><a href="https://youtu.be/h7SG7ccjn-g?si=UIQi9TUKJXFzcPa_">How I Built The "Poor-Shamed" Computer...</a></li>
-                    <li><a href="https://youtu.be/WYrTajuYhCk?si=KWHs5JDduHZXnMF6">I Made The Greatest Windows 11 Virtual Machine...</a></li>
-                    <li><a href="https://github.com/mateussouzaweb/kvm-qemu-virtualization-guide/blob/master/Docs/05%20-%20XML%20Configurations.md">KVM/QEMU XML Configuration Tips</a></li>
-                    <li><a href="https://www.baeldung.com/linux/grub-menu-management">Managing the GRUB Menu in Fedora Distributions</a></li>
+                    <li>
+                        <a href="https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF">
+                            PCI passthrough via OVMF
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/h7SG7ccjn-g?si=UIQi9TUKJXFzcPa_">
+                            How I Built The "Poor-Shamed" Computer...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/WYrTajuYhCk?si=KWHs5JDduHZXnMF6">
+                            I Made The Greatest Windows 11 Virtual Machine...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/mateussouzaweb/kvm-qemu-virtualization-guide/blob/master/Docs/05%20-%20XML%20Configurations.md">
+                            KVM/QEMU XML Configuration Tips
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.baeldung.com/linux/grub-menu-management">
+                            Managing the GRUB Menu in Fedora Distributions
+                        </a>
+                    </li>
                 </ul>
 
                 <span className="timestamp">

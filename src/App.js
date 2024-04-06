@@ -12,8 +12,8 @@ function App() {
                 <Route path="about" element={<Page page="about" />} />
                 <Route path="research" element={<Page page="research" />} />
                 <Route path="projects">
-                    <Route index element={<Page page="projects"/>} />
-                    <Route path="pc-build" element={<Page page="pc-build"/>} />
+                    <Route index element={<Page page="projects" />} />
+                    <Route path="pc-build" element={<Page page="pc-build" />} />
                 </Route>
                 <Route path="contact" element={<Page page="contact" />} />
                 {/* Wildcard path is for unknown routes. Routing to a Page without a prop defaults to the 404 page */}

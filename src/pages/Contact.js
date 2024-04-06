@@ -24,9 +24,22 @@ class Contact extends React.Component {
                     </tr>
                 </table> */}
 
-                <p>Email me at <code className="code-inline">liammurphy513 at gmail dot com</code></p>
-                <p>Visit me on <a href="https://www.linkedin.com/in/murphy-liam/">LinkedIn</a></p>
-                <p>Check out my <a href="https://github.com/lmurphy13">GitHub</a></p>
+                <p>
+                    Email me at{" "}
+                    <code className="code-inline">
+                        liammurphy513 at gmail dot com
+                    </code>
+                </p>
+                <p>
+                    Visit me on{" "}
+                    <a href="https://www.linkedin.com/in/murphy-liam/">
+                        LinkedIn
+                    </a>
+                </p>
+                <p>
+                    Check out my{" "}
+                    <a href="https://github.com/lmurphy13">GitHub</a>
+                </p>
             </div>
         );
     }
