@@ -63,8 +63,10 @@ class About extends React.Component {
                         Shannon Rovers Irish Pipe Band
                     </a>{" "}
                     since 2012. I wanted a new challenge, so in January 2024 I
-                    began taking piano lessons at the Wisconsin Conservatory of
-                    Music.
+                    began taking piano lessons at the {" "}
+                    <a href="https://www.wcmusic.org/">
+                        Wisconsin Conservatory of Music
+                    </a>.
                 </p>
 
                 <p>
