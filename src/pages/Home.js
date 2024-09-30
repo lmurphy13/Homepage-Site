@@ -9,7 +9,7 @@ class Home extends React.Component {
             <div className="page-content">
                 <img className="custom-image" src={liam} alt="liam"></img>
                 <p>
-                    I am a software engineer working on
+                    I am a software engineer living in Chicago. I work on
                     avionics connectivity equipment at{" "}
                     <a href="https://astronautics.com">
                         Astronautics Corporation of America
