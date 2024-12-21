@@ -216,6 +216,18 @@ class PCBuild extends React.Component {
                     options vfio-pci ids=10de:2786,10de:22bc
                 </code>
 
+                <p>
+                    Next, create the following Dracut configuration file: <code className="code-inline">/etc/dracut.conf.d/10-vfio.conf</code>. This includes vfio drivers within the initramfs:
+                </p>
+
+                <code className="code-block">
+                    force_drivers+=" vfio_pci vfio vfio_iommu_type1 "
+                </code>
+
+                <p>
+                    After setting up these files, we must then regenerate the initramfs. See the Arch Wiki article on <a href="https://wiki.archlinux.org/title/Dracut">Dracut</a>.
+                </p>
+
                 <h3>Part 5: Setting up Windows 11</h3>
                 <p>
                     I use{" "}
@@ -224,8 +236,8 @@ class PCBuild extends React.Component {
                     </a>{" "}
                     to manage my QEMU/KVM virtual machines. The setup process is
                     fairly simple. Create a new VM, allocate some memory, a
-                    virtual hard disk image, etc. Then, add the isolated GPU as
-                    a PCI device. Install Windows 11 as usual, and away you go.
+                    virtual hard disk image, etc. Then, add the isolated GPU and audio hardware as
+                    new PCI devices. Install Windows 11 as usual, and away you go.
                 </p>
 
                 <p>
@@ -274,7 +286,16 @@ class PCBuild extends React.Component {
                 </ul>
 
                 <span className="timestamp">
-                    Last modified: 2024/04/04 10:22:21
+                    <table style={{width: "21rem", textAlign: "justified", fontSize: "0.9em"}}>
+                        <tr>
+                            <td>Last modified:</td>
+                            <td>2024/12/20 10:14:49</td>
+                        </tr>
+                        <tr>
+                            <td>Previously modified:</td>
+                            <td>2024/04/04 10:22:21</td>
+                        </tr>
+                    </table>
                 </span>
                 <Link to="/projects">Go back</Link>
             </div>
