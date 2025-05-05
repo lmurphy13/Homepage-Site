@@ -42,6 +42,15 @@ body {
     box-shadow: 2px 2px 5px #2e2d2d;
 }
 
+.custom-image-home {
+    width: 20em;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    box-shadow: 2px 2px 5px #2e2d2d;
+}
+
 .band-image {
     height: auto;
     width: 20vw;
@@ -270,6 +279,10 @@ th {
     left:0;
     top:0;
     z-index: -1;
+}
+
+.image-caption {
+    font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 800px) {
