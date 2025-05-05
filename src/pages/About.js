@@ -1,4 +1,4 @@
-/* Copyright (c) 2024 - Liam M. Murphy */
+/* Copyright (c) 2024-2025 - Liam M. Murphy */
 
 import React from "react";
 import thesis from "../media/LiamMurphyThesis.pdf";
@@ -85,7 +85,7 @@ class About extends React.Component {
                     src={bandpic}
                     alt="liam and tim shannon rovers"
                 />
-                <caption>
+                <caption className="image-caption">
                     Me and my dad, Tim
                     <br />
                     St. Patrick's Day Parade
