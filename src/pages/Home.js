@@ -8,7 +8,7 @@ class Home extends React.Component {
         return (
             <div className="page-content">
                 <img className="custom-image-home" src={liam} alt="Liam at Airbus Helicopters, Marignane, France"></img>
-                <caption className="image-caption">Airbus Helicopters, Marignane, France</caption>
+                <caption className="image-caption">Marignane, France</caption>
                 <p style={{"paddingTop":"2rem"}}>
                     I am a software engineer living in Chicago. I work on
                     avionics connectivity equipment at{" "}
